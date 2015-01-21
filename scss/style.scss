@@ -49,3 +49,56 @@ img {max-width:100;}
 body {
     transition: opacity .25s ease;
 }
+html, body { 
+    height:100% 
+}
+
+.centerIt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#back{
+    display:inline-block;
+    min-height:100%;
+    width:100%;
+    font-size:20px
+    // background: radial-gradient(red, green, blue);
+}
+h1{
+    // color:red;
+    font-family:  "Courier New"
+}
+#line{
+    // position:relative;
+    // display:inline-block;
+    max-height:2px;
+    width:0%;
+    background-color:red;
+    top:60%
+    // margin-left:auto;
+    // margin-right:auto;
+    // overflow:hidden;
+}
+// #back:hover {
+//   content: 'sss'
+//    // attr(myHex);
+// }
+#hex{
+    width:100%;
+    opacity:0;
+    z-index:1;
+}
+#clock{
+    z-index:0
+}
+#hex:hover{
+    & ~ #clock{
+        display:none;
+    }
+    opacity:1
+}
+input{display:none;}
